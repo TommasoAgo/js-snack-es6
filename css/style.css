@@ -1,0 +1,43 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* COMMON */
+li {
+    list-style-type: none;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+/* Bici Box */
+.bici-box {
+    padding: 50px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    width: 50%;
+    margin: auto;
+
+    margin-top: 60px;
+
+    border-radius: 20px;
+}
+
+/* IMG */
+.img-container {
+    width: 50%;
+    margin: auto;
+
+    margin-top: 50px;
+}
+
+.img-container img {
+    width: 100%;
+    height: auto;
+}

@@ -47,11 +47,23 @@ let elementoBici = document.getElementById('bici-leggera')
 
 // Stampo
 elementoBici.innerHTML = `  <ul>
-                                <li>La bici più leggera è ${nome}</li> 
-                                <li>e il suo peso è di ${peso} KG</li>
+                                <li>La bici più leggera è <strong>${nome}</strong></li> 
+                                <li>e il suo peso è di <strong>${peso} KG</strong></li>
                             </ul>`;
 
-
+// TEST
+let elementoImg = document.getElementById('img-box');
+if ( biciclettaLeggera.nome == 'Venom' ) {
+    elementoImg.innerHTML = `<img src="img/2002 Diamondback Venom.jpg" alt="">`
+} else if ( biciclettaLeggera.nome == 'Graziella' ) {
+    elementoImg.innerHTML = `<img src="img/Graziella-1024x800.jpg" alt="">`
+} else if ( biciclettaLeggera.nome == 'Wanda' ) {
+    elementoImg.innerHTML = `<img src="img/Wanda.jpg" alt="">`
+} else if ( biciclettaLeggera.nome == 'Short' ) {
+    elementoImg.innerHTML = `<img src="img/image12.jpg" alt="">`
+} else if ( biciclettaLeggera.nome == 'Grosseto' ) {
+    elementoImg.innerHTML = `<img src="img/grosseto.jpg" alt="">`
+}
 
 
 // 2 Creare un array di oggetti di squadre di calcio. 
