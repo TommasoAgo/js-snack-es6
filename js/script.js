@@ -60,3 +60,65 @@ elementoBici.innerHTML = `  <ul>
 // Generare numeri random al posto degli 0 nelle proprietà: Punti fatti e falli subiti. 
 // Infine usando la destrutturazione creiamo un nuovo array 
 // i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
+
+// Creo un Array con squadre di calcio 
+const squadre = [
+    {
+        nome : 'AS Roma',
+        punti_fatti : 0,
+        falli_subiti : 0
+    },
+    {
+        nome : 'Sassuolo',
+        punti_fatti : 0,
+        falli_subiti : 0
+    },
+    {
+        nome : 'Atalanta',
+        punti_fatti : 0,
+        falli_subiti : 0
+    },
+    {
+        nome : 'Milan',
+        punti_fatti : 0,
+        falli_subiti : 0
+    },
+    {
+        nome : 'Napoli',
+        punti_fatti : 0,
+        falli_subiti : 0
+    }
+]
+
+// Creo un ciclo for per leggere tutti gli oggetti dell'Array
+const squadreNomeFalli = [];
+for ( let i = 0; i < squadre.length; i++ ) {
+    let thisSquadra = squadre[i];
+    // Inserisco i valori random nelle proprietà punti fatti e falli subiti
+    thisSquadra.punti_fatti = getRandomNumber(50, 100);
+    thisSquadra.falli_subiti = getRandomNumber(80, 120);
+
+    // Tramite destrutturazione ottengo le variabili per nome e falli subiti
+    let {nome, falli_subiti} = thisSquadra;
+    
+    // Creo la squadra che andrà a popolare il nuovo Array
+    let squadraNomeFalli = {
+        nome,
+        falli_subiti
+    }
+
+    // Pusho per ogni iterazione una squadra nell'Array vuoto
+    squadreNomeFalli.push(squadraNomeFalli);
+}
+
+// Stampo su console
+console.log(squadreNomeFalli);
+
+// Functions
+
+// Creo una funzione che generi numeri random per punti fatti e falli subiti
+function getRandomNumber(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
